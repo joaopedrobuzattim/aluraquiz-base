@@ -4,25 +4,25 @@
   "description": "Quiz sobre a maior saga que o cinema mundial já viu! Que a força esteja com você!",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/3ornk57KwDXf81rjWM/giphy.gif",
+      "title": "Com quantos anos Luke conheceu Obi Wan Kenobi?",
       "description": "Essa é pra aquecer",
-      "answer": 2,
+      "answer":1,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "15 anos",
+        "12 anos",
+        "10 anos",
+        "11 anos"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://media.giphy.com/media/rHR8qP1mC5V3G/giphy.gif",
+      "title": "Nos planos de George Lucas, Han Solo teria a aparência de um peixe, mas sem as guelras. Seria uma espécie de grande monstro verde.",
+      "description": "Confio em você!",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Verdadeiro",
+         "Falso"
       ]
     }
   ],
