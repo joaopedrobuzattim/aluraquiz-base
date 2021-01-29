@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import styled from 'styled-components';
 import Head from 'next/head';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
@@ -11,6 +10,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
+import Link from '../src/components/Link';
 
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
               >
                 <Input
                   name="nomeDoUsuario"
-                  onChange={(event)=> setName(event.target.value)}
+                  onChange={(event) => setName(event.target.value)}
                   placeholder="Diz ai seu nome"
                   value={name}
                 />
@@ -52,6 +52,27 @@ export default function Home() {
                   {`Jogar ${name}`}
                 </Button>
               </form>
+            </Widget.Content>
+          </Widget>
+          <Widget>
+            <Widget.Content>
+              <h1> Quizes da Galera!! </h1>
+              <ul>
+                {db.external.map((linkExterno) => {
+                  const [projectName, gitHubUser] = linkExterno
+                    .replace(/\//g, '')
+                    .replace('https:', '')
+                    .replace('.vercel.app', '')
+                    .split('.');
+                  return (
+                    <li key={linkExterno}>
+                      <Widget.Topic as={Link} href={`/quiz/${projectName}___${gitHubUser}`}>
+                        {`${gitHubUser}/${projectName}`}
+                      </Widget.Topic>
+                    </li>
+                  );
+                })}
+              </ul>
             </Widget.Content>
           </Widget>
           <Footer />
